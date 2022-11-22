@@ -61,11 +61,11 @@
 {{> theme_boost/head }}
 
 <body {{{ bodyattributes }}}>
+
 {{> core/local/toast/wrapper}}
 <div id="page-wrapper" class="d-print-block">
 
     {{{ output.standard_top_of_body_html }}}
-
     {{> theme_boost/navbar }}
     {{#courseindex}}
         {{< theme_boost/drawer }}
@@ -99,6 +99,11 @@
         {{/ theme_boost/drawer}}
     {{/hasblocks}}
     <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
+        {{#hasfullwidthblocks}}
+        <div id="blocksfullwidth">
+            {{{blocksfullwidth}}}
+        </div>
+        {{/hasfullwidthblocks}}
         <div id="topofscroll" class="main-inner">
             <div class="drawer-toggles d-flex">
                 {{#courseindex}}

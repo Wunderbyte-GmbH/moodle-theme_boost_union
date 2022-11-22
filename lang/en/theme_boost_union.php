@@ -370,3 +370,6 @@ $string['boost_union:viewhintinhiddencourse'] = 'To be able to see a hint in a h
 
 // Caches.
 $string['cachedef_fontawesome'] = 'FontAwesome files (which are uploaded in the Boost Union settings)';
+
+// Block region
+$string['region-fullwidth-top'] = 'Fullwidth Top';

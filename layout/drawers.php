@@ -79,7 +79,11 @@ if (!$courseindex) {
     $courseindexopen = false;
 }
 
+$blocksfullwidth = $OUTPUT->blocks('fullwidth-top');
+$hasfullwidthblocks = (strpos($blockshtml, 'data-block=') !== false || !empty($addblockbutton));
+
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
+
 $forceblockdraweropen = $OUTPUT->firstview_fakeblocks();
 
 $secondarynavigation = false;
@@ -109,6 +113,8 @@ $templatecontext = [
     'output' => $OUTPUT,
     'sidepreblocks' => $blockshtml,
     'hasblocks' => $hasblocks,
+    'blocksfullwidth' => $blocksfullwidth,
+    'hasfullwidthblocks' => $hasfullwidthblocks,
     'bodyattributes' => $bodyattributes,
     'courseindexopen' => $courseindexopen,
     'blockdraweropen' => $blockdraweropen,

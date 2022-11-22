@@ -52,6 +52,8 @@ $extraclasses = [];
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = (strpos($blockshtml, 'data-block=') !== false || !empty($addblockbutton));
+$blocksfullwidth = $OUTPUT->blocks('fullwidth-top');
+$hasfullwidthblocks = (strpos($blockshtml, 'data-block=') !== false || !empty($addblockbutton));
 
 $secondarynavigation = false;
 $overflow = '';
@@ -80,6 +82,8 @@ $templatecontext = [
     'output' => $OUTPUT,
     'sidepreblocks' => $blockshtml,
     'hasblocks' => $hasblocks,
+    'blocksfullwidth' => $blocksfullwidth,
+    'hasfullwidthblocks' => $hasfullwidthblocks,
     'bodyattributes' => $bodyattributes,
     'primarymoremenu' => $primarymenu['moremenu'],
     'secondarymoremenu' => $secondarynavigation ?: false,
